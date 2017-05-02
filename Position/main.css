@@ -1,0 +1,55 @@
+* {
+	box-sizing: border-box;
+}
+body {
+	line-height: 150%;
+	font-size: 24px;
+	color: #333;
+}
+h1 {
+	margin-bottom: 20px;
+	font-size: 24px;
+	line-height: 200%;
+}
+p {
+	margin-bottom: 20px;
+	line-height: 150%;
+	font-size: 18px;
+}
+.container{
+	padding: 20px;
+	width: 600px;
+	margin: 0 auto;
+}
+.fixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 40px;
+	margin: 0;
+	text-align: center;
+	background: darkgrey;
+}
+.relative {
+	position: relative;
+	padding: 20px;
+	text-align: center;
+	height: 200px;
+	background: #ccc;
+	margin-bottom: 20px;
+
+}
+.absolute {
+	position: absolute;
+	bottom: 0;
+	right: -30px;
+	padding: 40px;
+	text-align: center;
+	width: 250px;
+	background: grey;
+
+}
+
+
+
+
