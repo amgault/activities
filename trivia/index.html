@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<title>Document</title>
+		
+		<style>
+
+			body{
+				width: 100%;
+			}
+
+			.wrapper {
+				margin: auto;
+				width: 960px;
+			}
+
+			.start-button {
+				font-size: 36px;
+				margin: 24px auto;
+				padding: 12px;
+				display: block;
+			}
+			
+			.questions{
+				border: 2px rebeccapurple solid;
+				margin: auto;
+				padding: 12px;
+			}
+
+			.question {
+				margin-bottom: 24px;
+				border: 2px rebeccapurple solid;
+				margin: auto;
+				padding: 12px;
+			}
+
+			.input {
+				margin-left: 24px;
+			}
+
+		</style>
+
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+
+	</head>
+	
+	<body>
+
+	<div id='app'>
+		<div class='wrapper'>
+			<button id='start' class='start-button'>Start</button>
+
+				<div id='question'>
+					<div class='question'>
+						<div>1. How many developers does it take to screw in a light bulb?</div>
+						<div id='answers'>
+							<div><input class='input' type='radio'>0</input></div>
+							<div><input class='input' type='radio'>1</input></div>
+							<div><input class='input' type='radio'>2</input></div>
+							<div><input class='input' type='radio'>3</input></div>
+						</div>
+					</div>
+
+					<div class='question'>
+						<div>1. What is the best band of all time?</div>
+						<div><input class='input' type='radio'>Beatles</input></div>
+						<div><input class='input' type='radio'>New Order</input></div>
+						<div><input class='input' type='radio'>ABBA</input></div>
+						<div><input class='input' type='radio'>Carley Rae Jepson</input></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	<script>
+		// VARIABLES
+		var questions = [
+			{
+				question: 'How many developers does it take to screw in a light bulb?',
+				answers: ['0', '1', '2', '3'],
+				correctAnswer: '0'
+			},
+
+			{
+				question: 'What is the best band of all time?',
+				answers: ['Beatles', 'New Order', 'ABBA', 'Carley Rae Jepson'],
+				correctAnswer: 'ABBA'
+			}
+		];
+
+
+		// EVENTS
+			// initialize
+			// button click
+			$('#start').on('click', function() {
+				startGame();
+			})
+
+		// FUNCTIONS
+		function startGame() {
+			for(var i = 0; i<questions.length; i++) {
+				var a = i + 1;
+				$('#question').append('<div>' + j + '. ' + questions[i].question + '</div>');
+				for(var j = 0; j < questions[i].answer.length; j++) {
+					$('#question').append('<div><input class="input" type="radio">' + questions[i]answer[j]+'</input></div>');
+				}
+			}
+			
+		}
+
+
+	</script>
+		
+	</body>
+</html>
+
+
+
+
+

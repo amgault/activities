@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function isPrimeNumber(number) {
+			for (var i = 2; i < number; i++) {
+				if(number % i === 0) {
+					return false;
+				}
+			}
+			return true;
+			// return number > 1;
+			// this will handle ngative numbers, which are never prime
+		}
+
+		console.log(isPrimeNumber(-5));
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function checkForPrimeNumber(number) {
+			for (var i = 2; i < number; i++) {
+				if(number % i === 0) {
+					return false;
+				}
+			}
+			return true;
+
+		}
+		console.log(checkForPrimeNumber(10));
+	</script>
+	
+</body>
+</html>

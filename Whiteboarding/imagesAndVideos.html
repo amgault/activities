@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+
+	<script>
+		function sortFiles(fileArray) {
+			var images = [];
+			var videos = [];
+			for (var i = 0; i < fileArray.length; i++) {
+
+				// split word into array and pop the last index, which is ending of the file
+				// var ext = fileArray[i].split('.').pop();
+				var ext = fileArray[i].slice(fileArray[i].indexOf('.') + 1);
+				if(imgExt.indexOf(ext) >= 0) {
+				// if((ext === 'mov')||(ext === 'avi')||(ext === 'mpeg')||(ext === 'mp4')||(ext === 'mpg')) 
+				// if(imgExt.includes(ext))
+					videos.push(fileArray[i]);
+				}
+				else if(videoExt.indexOf(ext) >= 0) {
+				// else if((ext === 'jpg')||(ext === 'gif')||(ext === 'jpeg')||(ext === 'png')) 
+				// else if(videoExt.includes(ext))
+					images.push(fileArray[i]);
+				}
+				else {
+					console.log(fileArray[i] + ' is not a movie or image type.')
+				}
+			}
+
+			console.log(images);
+			console.log(videos);
+			return [images, videos];
+		}
+
+		var imgExt = ['jpg', 'gif', 'jpeg', 'png'];
+		var videoExt = ['mov', 'avi', 'mpeg', 'mp4', 'mpg'];
+
+		var files = [
+		    "pavans_first_birthday.mov",
+		    "owens_asleep_at_the_computer.jpg",
+		    "michael_fights_a_polar_bear.mp4",
+		    "nate_road_rage.avi",
+		    "ruby_skydiving.jpeg",
+		    "ken_getting_his_black_belt.png",
+		    "dan_winning_underground_street_race.mov",
+		    "its_hard_to_come_up_with_file_names.gif",
+		    "seriously_this_is_taking_too_long.mpg",
+		    "i_wonder_how_many_of_these_i_should_have.png",
+		    "probably_a_few_more.avi",
+		    "nutmeg_is_clawing_my_sneakers_again.mp4",
+		    "cat_i_will_destroy_you.gif",
+		    "i_wish_we_had_a_dog.jpeg",
+		    "stop_looking_at_me_like_that_nutmeg.mpeg",
+		    "aww_i_cant_hate_you.png",
+		    "omg_my_sneakers.avi",
+		    "cat_you_are_the_worst.mp4"
+		];
+
+		console.log(sortFiles(files));
+
+	</script>
+	
+</body>
+</html>

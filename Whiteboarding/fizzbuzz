@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+	</head>
+
+	<body>
+
+		<script>
+			function fizzBuzz(number) {
+				for(var i = 1; i <= number; i++) {
+					if((i % 3 === 0) && (i % 5 === 0)) {
+						console.log('FizzBuzz');
+					}
+					else if (i % 3 === 0) {
+						console.log('Fizz');
+					}
+					else if (i % 5 === 0) {
+						console.log('Buzz');
+					}
+					else {
+						console.log(i);
+					}
+				}
+			}
+
+			fizzBuzz(100);
+		</script>
+		
+	</body>
+</html>
